@@ -4,17 +4,16 @@ LOCAL_PATH := $(call my-dir)
 include $(CLEAR_VARS)
 
 LOCAL_OBJS_TO_REMOVE := \
-       xga_font_data.o                                                  \
-       xtea.o                                                           \
-       tree.o                                                           \
+       	xga_font_data.o                                                  \
+       	xtea.o                                                           \
+       	tree.o                                                           \
 		aes.o                                                            \
-       blowfish.o                                                       \
-       lzo.o                                                            \
-       lls.o                                                            \
+       	blowfish.o                                                       \
+       	lzo.o                                                            \
+       	lls.o                                                            \
 		cast5.o \
 		ripemd.o \
 		hash.o \
-		parseutils.o \
 		camellia.o \
 		twofish.o \
 		murmur3.o \
@@ -24,11 +23,15 @@ LOCAL_OBJS_TO_REMOVE := \
 		adler32.o \
 		arm\float_dsp_init_vfp.o \
 		arm\float_dsp_vfp.o \
-		
+
 #		fixed_dsp.o \
 		imgutils.o                                                       \
-       pixdesc.o                                                        \
-		
+       	pixdesc.o                                                        \
+
+# if --disable-network enabled, line below can be uncommented
+#
+# LOCAL_OBJS_TO_REMOVE += \
+		parseutils.o \
 
 #LOCAL_USE_LOCAL_MAKEFILE := yes
 include $(LOCAL_PATH)/../av.mk

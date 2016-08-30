@@ -8,7 +8,7 @@ include $(LOCAL_PATH)/config-pamp.mak
 GLOBAL_FLTO := false # NOTE: flto doesn't work with ffmpeg properly (28-05-2014, gcc 4.9/NDK 10e) 
 
 GLOBAL_CFLAGS := -std=c99 -ffast-math -fstrict-aliasing -Werror=strict-aliasing -Os   
-GLOBAL_CFLAGS += -DHAVE_AV_CONFIG_H -DPAMP_CONFIG_NO_VIDEO=1  -DPAMP_CONFIG_FLOAT_ONLY_RESAMPLER=1 -DPAMP_CHANGES=1
+GLOBAL_CFLAGS += -DHAVE_AV_CONFIG_H -DPAMP_CONFIG_NO_VIDEO=1  -DPAMP_CONFIG_FLOAT_ONLY_RESAMPLER=1 -DPAMP_CHANGES=0
 GLOBAL_CFLAGS += -DPAMP_CONFIG_NO_TAGS=1 -DPAMP_FFMPEG_STUBS=0 
 
 # NOTE: PAMP_FFMPEG_STUBS=0 needed for mpc
@@ -97,7 +97,6 @@ LOCAL_WHOLE_STATIC_LIBRARIES := libavformat libavutil libsoxr-prebuilt libswresa
 LOCAL_MODULE := libffmpeg_$(GLOBAL_ARCH_MODE)
 
 #LOCAL_SHARED_LIBRARIES := libopus-prebuilt 
-
 
 ifeq ($(NDK_APP_DEBUGGABLE),true)
 $(warning NO_STRIP SO)		

@@ -86,7 +86,6 @@ $FFMPEG_PATH/configure --target-os=linux \
 --disable-swscale \
 --disable-avfilter \
 --disable-everything \
---disable-network \
 --disable-vaapi \
 --disable-vdpau \
 --disable-pthreads \
@@ -95,6 +94,7 @@ $FFMPEG_PATH/configure --target-os=linux \
 --enable-protocol=pipe \
 --enable-protocol=http \
 --enable-protocol=rtp \
+--enable-protocol=hls \
 \
 --enable-decoder=aac \
 --enable-decoder=mp3float \

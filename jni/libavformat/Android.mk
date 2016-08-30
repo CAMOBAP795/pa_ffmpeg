@@ -9,24 +9,23 @@ LOCAL_OBJS_TO_REMOVE := \
 	log2_tab.o golomb_tab.o \
 	oggparsedirac.o  \
 	oggparsecelt.o   \
-	oggparseogm.o    \
-	oggparsespeex.o  \
 	oggparsetheora.o \
 	oggparsevp8.o \
 	flac_picture.o \
 	img2.o \
+	replaygain.o \
+
+#	img2.o \
+    mux.o                \
+    sdp.o                \
+    subtitles.o          \
+
+# if --disable-network enabled, line below can be uncommented
+#
+# LOCAL_OBJS_TO_REMOVE += oggparseogm.o    \
+	oggparsespeex.o  \
 	avlanguage.o \
 	mux.o \
-	replaygain.o \
-	
- 
-# \
-#img2.o \
-#        mux.o                \
-#        sdp.o                \
-#        subtitles.o          \
-#         \
-
 
 #LOCAL_USE_LOCAL_MAKEFILE := yes
 include $(LOCAL_PATH)/../av.mk
