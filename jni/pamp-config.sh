@@ -201,6 +201,8 @@ $FFMPEG_PATH/configure --target-os=linux \
 --enable-decoder=pcm_lxf \
 --enable-decoder=pcm_dvd \
 \
+--enable-encoder=pcm_s16be \
+\
 --enable-demuxer=pcm_s8 \
 --enable-demuxer=pcm_u8 \
 --enable-demuxer=pcm_s16be \
@@ -222,6 +224,10 @@ $FFMPEG_PATH/configure --target-os=linux \
 --enable-demuxer=pcm_f64le \
 --enable-demuxer=pcm_alaw \
 --enable-demuxer=pcm_mulaw \
+\
+--enable-muxer=pcm_s16be \
+--enable-muxer=rtp \
+--enable-muxer=rtsp \
 \
 "
 # NOTE: tta demuxer is needed for tta decoder to read tags.
