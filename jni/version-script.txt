@@ -86,25 +86,22 @@
 		tta_decoder_done;
 	
 		# network 
-		avformat_network_init;
-		avformat_alloc_output_context2;
-		avformat_new_stream;
-		avformat_write_header;
-		avformat_free_context;
-		avcodec_alloc_context3;
-		avcodec_copy_context;
+		avio_open;
+		avio_close;
 		avcodec_find_encoder;
 		avcodec_fill_audio_frame;
 		avcodec_encode_audio2;
-		avio_open;
-		avio_close;
-		av_gettime;
-		av_usleep;
-		av_rescale_q_rnd;
+		avformat_network_init;
+		avformat_alloc_output_context2;
+		avformat_free_context;
+		avformat_new_stream;
+		avformat_write_header;
 		av_interleaved_write_frame;
 		av_write_trailer;
 		av_samples_get_buffer_size;
 		av_frame_alloc;
+		av_frame_free;
+		av_rescale_q_rnd;
 	
 	local: *;
 };
