@@ -1,7 +1,7 @@
 #!/bin/sh
 
 FFMPEG_PATH=../FFmpeg
-NDK_PATH=/opt/android-ndk-r10d
+NDK_PATH=$ANDROID_NDK
 PLATFORM=$NDK_PATH/platforms/android-14/arch-arm
 GCC_VER=4.9
 EABI=arm-linux-androideabi-4.9

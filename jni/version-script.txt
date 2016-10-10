@@ -63,6 +63,7 @@
 		av_rdft_calc;
 		av_log2;
 		av_log_set_level;
+		av_pkt_dump2;
 		
 		av_lfg_init;
 		frandom;
