@@ -14,3 +14,5 @@ addr2line.sh
 build-d16.sh
 list-all.sh
 listobj.sh
+/jni/libavutil/avconfig.h
+/jni/.config
